@@ -2,81 +2,48 @@
 
 # SIMULIA Subscription Assistant
 
-An interactive knowledge graph visualization and assistant for exploring SIMULIA subscription tiers, features, limitations, and support options.
+An intelligent customer support system powered by a knowledge graph and a local large language model (LLM) to help users explore SIMULIA subscription tiers, features, limitations, and support options. Users can interact through an intuitive UI, ask questions in plain English, and receive accurate answers grounded in structured knowledge.
 
-## Features
+---
 
-- **Interactive Knowledge Graph**: Visualize the relationships between subscription tiers, features, limitations, and support options.
+## 🎯 Features
+
+- **Interactive Knowledge Graph**: Visualize the relationships between subscription tiers, features, limitations, and support levels.
 - **Comparison View**: Side-by-side comparison of different subscription tiers.
-- **Chat Interface**: Ask questions about subscription details and get instant answers.
+- **Chat Interface**: Ask questions about subscription details and get instant answers using a connected LLM.
 - **Tier Filtering**: Focus on specific subscription tiers to understand their offerings better.
+- **LLM Integration**: Converts user questions into graph-aware queries and generates natural-sounding answers.
+- **Multi-hop Reasoning**: Supports chained queries like upgrade paths and their associated benefits.
 
-## Technologies Used
+---
 
-- React
-- Tailwind CSS
-- Recharts
-- D3.js
-- Lucide React (for icons)
+## 🧰 Technologies Used
 
-## Installation
+### 🖥️ Frontend
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/your-username/simulia-subscription-assistant.git
-   cd simulia-subscription-assistant
-   ```
+- **React** – Component-based UI library
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **Recharts** – For charting and tier comparisons
+- **D3.js** – For knowledge graph visualization
+- **Lucide React** – Icon set for UI consistency
 
-2. Install dependencies:
-   ```
-   npm install
-   ```
+### 🧠 Backend / Graph Intelligence
 
-3. Start the development server:
-   ```
-   npm start
-   ```
+- **Neo4j** – Graph database to store and query subscription tiers, features, limitations, and support levels
+- **Cypher** – Query language for Neo4j
+- **LangChain** – Framework for integrating LLMs with external knowledge sources like graphs
+- **Mistral 7B (GGUF)** – Open-source LLM used for parsing user questions and generating answers
+- **Python** – Backend language for data loading, query engine, and app logic
+- **Streamlit** – Optional minimal frontend for rapid QA testing and demos
 
-## Usage
+---
 
-The application has three main views:
+## 🚀 Installation
 
-1. **Comparison**: Compare features, limitations, and support across different subscription tiers
-2. **Knowledge Graph**: Visualize the relationships between tiers and their components
-3. **Chat**: Ask questions about subscription details
+### Frontend Setup
 
-### Interacting with the Knowledge Graph
-
-- Click on a tier in the sidebar to filter the graph
-- Hover over nodes to see detailed information
-- Click on nodes to focus on specific relationships
-
-## Data Structure
-
-The subscription data is structured as follows:
-
-- **Features**: Capabilities included in each tier
-- **Limitations**: Constraints of each tier
-- **SupportLevels**: Support options available for each tier
-- **Relationships**: Connections between tiers and potential upgrade paths
-
-## Customization
-
-You can customize the subscription data by modifying the `subscriptionData` object in `src/components/SimuliaKnowledgeAssistant.js`.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add some amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- SIMULIA for inspiration
-- The React and D3.js communities for their excellent documentation
+```bash
+git clone https://github.com/your-username/simulia-subscription-assistant.git
+cd simulia-subscription-assistant
+npm install
+npm start
