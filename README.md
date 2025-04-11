@@ -47,3 +47,22 @@ git clone https://github.com/your-username/simulia-subscription-assistant.git
 cd simulia-subscription-assistant
 npm install
 npm start
+
+### Backend Setup
+Ensure Neo4j is installed and running locally (use Neo4j Desktop or Docker)
+
+Navigate to the backend and install Python dependencies:
+
+pip install -r requirements.txt
+Configure Neo4j connection credentials in config.py:
+
+# config.py
+NEO4J_URI = "bolt://localhost:7687"
+NEO4J_USER = "neo4j"
+NEO4J_PASSWORD = "neo4j123"  # Replace with your actual Neo4j password
+Load the knowledge graph into Neo4j:
+
+
+Building the Neo4j graph:
+python graph/build_graph.py
+
