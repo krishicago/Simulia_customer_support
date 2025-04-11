@@ -1,8 +1,12 @@
-# Simulia_customer_support
-
 # SIMULIA Subscription Assistant
 
 An interactive knowledge graph visualization and assistant for exploring SIMULIA subscription tiers, features, limitations, and support options.
+
+## Architecture
+
+![Architecture Diagram](https://github.com/krishicago/Simulia_customer_support/blob/main/simulia-react-frontend/public/architecture.png)
+
+The above diagram illustrates the architecture of the SIMULIA Subscription Assistant application.
 
 ## Features
 
@@ -64,6 +68,13 @@ The subscription data is structured as follows:
 
 You can customize the subscription data by modifying the `subscriptionData` object in `src/components/SimuliaKnowledgeAssistant.js`.
 
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ## License
 
