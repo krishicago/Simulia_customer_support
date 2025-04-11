@@ -1,68 +1,86 @@
-# Simulia_customer_support
-
 # SIMULIA Subscription Assistant
 
-An intelligent customer support system powered by a knowledge graph and a local large language model (LLM) to help users explore SIMULIA subscription tiers, features, limitations, and support options. Users can interact through an intuitive UI, ask questions in plain English, and receive accurate answers grounded in structured knowledge.
+An interactive knowledge graph visualization and assistant for exploring SIMULIA subscription tiers, features, limitations, and support options.
 
----
+## Architecture
 
-## 🎯 Features
+![Architecture Diagram](https://github.com/krishicago/Simulia_customer_support/blob/main/simulia-react-frontend/public/architecture.png)
 
-- **Interactive Knowledge Graph**: Visualize the relationships between subscription tiers, features, limitations, and support levels.
+The above diagram illustrates the architecture of the SIMULIA Subscription Assistant application.
+
+## Features
+
+- **Interactive Knowledge Graph**: Visualize the relationships between subscription tiers, features, limitations, and support options.
 - **Comparison View**: Side-by-side comparison of different subscription tiers.
-- **Chat Interface**: Ask questions about subscription details and get instant answers using a connected LLM.
+- **Chat Interface**: Ask questions about subscription details and get instant answers.
 - **Tier Filtering**: Focus on specific subscription tiers to understand their offerings better.
-- **LLM Integration**: Converts user questions into graph-aware queries and generates natural-sounding answers.
-- **Multi-hop Reasoning**: Supports chained queries like upgrade paths and their associated benefits.
 
----
+## Technologies Used
 
-## 🧰 Technologies Used
+- React
+- Tailwind CSS
+- Recharts
+- D3.js
+- Lucide React (for icons)
 
-### 🖥️ Frontend
+## Installation
 
-- **React** – Component-based UI library
-- **Tailwind CSS** – Utility-first CSS framework for styling
-- **Recharts** – For charting and tier comparisons
-- **D3.js** – For knowledge graph visualization
-- **Lucide React** – Icon set for UI consistency
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/simulia-subscription-assistant.git
+   cd simulia-subscription-assistant
+   ```
 
-### 🧠 Backend / Graph Intelligence
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-- **Neo4j** – Graph database to store and query subscription tiers, features, limitations, and support levels
-- **Cypher** – Query language for Neo4j
-- **LangChain** – Framework for integrating LLMs with external knowledge sources like graphs
-- **Mistral 7B (GGUF)** – Open-source LLM used for parsing user questions and generating answers
-- **Python** – Backend language for data loading, query engine, and app logic
-- **Streamlit** – Optional minimal frontend for rapid QA testing and demos
+3. Start the development server:
+   ```
+   npm start
+   ```
 
----
+## Usage
 
-## 🚀 Installation
+The application has three main views:
 
-### Frontend Setup
+1. **Comparison**: Compare features, limitations, and support across different subscription tiers
+2. **Knowledge Graph**: Visualize the relationships between tiers and their components
+3. **Chat**: Ask questions about subscription details
 
-```bash
-git clone https://github.com/your-username/simulia-subscription-assistant.git
-cd simulia-subscription-assistant
-npm install
-npm start
+### Interacting with the Knowledge Graph
 
-### Backend Setup
-Ensure Neo4j is installed and running locally (use Neo4j Desktop or Docker)
+- Click on a tier in the sidebar to filter the graph
+- Hover over nodes to see detailed information
+- Click on nodes to focus on specific relationships
 
-Navigate to the backend and install Python dependencies:
+## Data Structure
 
-pip install -r requirements.txt
-Configure Neo4j connection credentials in config.py:
+The subscription data is structured as follows:
 
-# config.py
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "neo4j123"  # Replace with your actual Neo4j password
-Load the knowledge graph into Neo4j:
+- **Features**: Capabilities included in each tier
+- **Limitations**: Constraints of each tier
+- **SupportLevels**: Support options available for each tier
+- **Relationships**: Connections between tiers and potential upgrade paths
 
+## Customization
 
-Building the Neo4j graph:
-python graph/build_graph.py
+You can customize the subscription data by modifying the `subscriptionData` object in `src/components/SimuliaKnowledgeAssistant.js`.
 
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add some amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- SIMULIA for inspiration
+- The React and D3.js communities for their excellent documentation
