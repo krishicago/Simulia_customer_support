@@ -1,0 +1,12 @@
+{
+  "Upgrades": {
+    "Basic": ["Standard", "Premium"],
+    "Standard": ["Premium"],
+    "Premium": []
+  },
+  "SUPPORTS": {
+    "Basic": ["Email Support (Next-Business-Day Response)"],
+    "Standard": ["Email Support (Business Hours)", "Live Chat (Business Hours)"],
+    "Premium": ["Phone Support (24/7)", "Live Chat (24/7)", "Dedicated Engineer"]
+  }
+}

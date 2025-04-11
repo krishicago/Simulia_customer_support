@@ -1,0 +1,43 @@
+{
+  "Features": {
+    "Basic": [
+      "Single-Physics Simulation",
+      "Basic Geometry Handling"
+    ],
+    "Standard": [
+      "Multi-Physics Simulation",
+      "Parametric Sweeps",
+      "Advanced Meshing Toolkit"
+    ],
+    "Premium": [
+      "High-Performance Computing Integration",
+      "Co-Simulation with External Tools",
+      "Full Geometry Optimization Suite"
+    ]
+  },
+  "Limitations": {
+    "Basic": [
+      "Max 500k Degrees of Freedom",
+      "No HPC Cluster Access"
+    ],
+    "Standard": [
+      "Max 2 Million Degrees of Freedom",
+      "Limited HPC Nodes (Up to 2)"
+    ],
+    "Premium": []
+  },
+  "SupportLevels": {
+    "Basic": [
+      "Email Support (Next-Business-Day Response)"
+    ],
+    "Standard": [
+      "Email Support (Business Hours)",
+      "Live Chat (Business Hours)"
+    ],
+    "Premium": [
+      "Phone Support (24/7)",
+      "Live Chat (24/7)",
+      "Dedicated Engineer"
+    ]
+  }
+}
